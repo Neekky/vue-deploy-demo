@@ -14,7 +14,8 @@ jobs:
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: dist # The folder the action should deploy.
-        # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        # BRANCH: gh-pages
-        # FOLDER: dist
-        # BUILD_SCRIPT: npm install && npm run build
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+        BUILD_SCRIPT: npm install && npm run build
